@@ -10,6 +10,16 @@ const nextConfig = withContentlayer(
     swcMinify: true,
     experimental: {
       appDir: true
+    },
+
+    async redirects() {
+      return [
+        {
+          source: '/posts/:slug',
+          destination: '/writing/:slug',
+          permanent: true
+        }
+      ]
     }
   })
 )
