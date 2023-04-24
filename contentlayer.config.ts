@@ -1,6 +1,8 @@
+import {assert} from '@jclem/assert'
 import {defineDocumentType, makeSource} from 'contentlayer/source-files'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import summaries from './summaries.json'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -16,7 +18,18 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: 'string',
-      resolve: (doc) => `/writing/${doc.slug}`
+      resolve: (doc) => {
+        return `/writing/${doc.slug}`
+      }
+    },
+
+    summary: {
+      type: 'string',
+      resolve: (doc) => {
+        return assert(
+          summaries.find((summary) => summary.path === doc._raw.sourceFilePath)
+        ).summary
+      }
     }
   }
 }))

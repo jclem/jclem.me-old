@@ -36,6 +36,7 @@ export async function generateMetadata({
   const post = assert(allPosts.find((post) => post.slug === slug))
 
   return {
-    title: pageTitle(post.title)
+    title: pageTitle(post.title),
+    description: post.summary
   }
 }

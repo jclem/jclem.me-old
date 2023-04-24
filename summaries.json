@@ -1,0 +1,56 @@
+[
+	{
+		"path": "2017-03-23-crystal-cli.mdx",
+		"summary": "In this blog post, Jonathan Clem shares his experience building a command-line application in Crystal to help with filling in _.env_ files. He discusses the ease of parsing command-line options with Crystal's built-in option parser and compares JSON parsing in Crystal to other languages like Go. Clem also touches on error handling and how Elixir's approach has influenced his preferences. Overall, he enjoyed writing the application in Crystal and plans to continue using it for building command-line applications.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBCdWlsZGluZyBhIENvbW1hbmQtTGluZSBBcHBsaWNhdGlvbiBp"
+	},
+	{
+		"path": "2019-01-26-github-actions-elixir.mdx",
+		"summary": "In this blog post, Jonathan Clem demonstrates how to use GitHub Actions in an Elixir project, creating a simple workflow that tests and checks the formatting of code. He walks through the process of creating an action that can run mix commands, and then builds a workflow using the visual editor. The post also covers adding actions for fetching dependencies, running tests, and checking code formatting. By the end, readers will have a better understanding of how to integrate GitHub Actions into their Elixir projects and improve their development workflow.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBHaXRIdWIgQWN0aW9ucyBmb3IgRWxpeGlyCnNsdWc6IDIwMTkt"
+	},
+	{
+		"path": "2019-01-28-siri-deploy-elixir.mdx",
+		"summary": "In this blog post, Jonathan Clem demonstrates how to deploy an Elixir app using Siri on an iPhone. He walks through the process of building a GitHub Actions workflow that deploys the app to the Heroku Container Runtime using Actions, and then shows how to trigger the deployment using Siri. While this method may not be recommended for real-world production apps, it serves as a fun example of what can be done with GitHub Actions.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBIZXkgU2lyaSwgRGVwbG95IE15IEVsaXhpciBBcHAKc2x1Zzog"
+	},
+	{
+		"path": "2019-08-21-observing-phoenix.mdx",
+		"summary": "In this blog post, Jonathan Clem demonstrates how recent updates to the Heroku command line interface (CLI) enable the use of Erlang's Observer on Phoenix apps running on Heroku. He explains the necessary changes to a typical Phoenix deployment on Heroku and provides a step-by-step guide on how to connect directly to your dyno and open the Observer. This new functionality allows developers to monitor and troubleshoot their Phoenix applications more effectively.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBPYnNlcnZpbmcgUGhvZW5peCBvbiBIZXJva3UKc2x1ZzogMjAx"
+	},
+	{
+		"path": "2019-09-19-live-view.mdx",
+		"summary": "In this blog post, Jonathan Clem explores the benefits of using Phoenix LiveView, a package that allows for dynamic page updates without the need for a reload. He shares his experience of incorporating LiveView into his personal website, enabling him to create and edit blog posts within the site itself. Clem highlights the ease of implementing live side-by-side rendering of post content while writing in Markdown, without the need for JavaScript or WebSockets. Ultimately, he appreciates the freedom Phoenix LiveView provides in quickly implementing features that would otherwise be too time-consuming or complex to bother with.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBPbiB0aGUgVXRpbGl0eSBvZiBQaG9lbml4IExpdmVWaWV3CnNs"
+	},
+	{
+		"path": "2019-12-19-react-router.mdx",
+		"summary": "In this blog post, Jonathan Clem shares his experience building a simple router in React, inspired by a tweet from Joel Califa. The goal was to create a way to render different \"page\" components depending on the location's path, link between those pages without passing state around, and use no dependencies other than React. Clem walks readers through the process of setting up the basic application skeleton, creating a RouterProvider component using React Context, wiring it up with the application component, and handling user navigation. While the experiment was successful, Clem acknowledges that there are more complex use cases and features that real routing libraries handle.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBCdWlsZGluZyBhIFJvdXRlciBpbiBSZWFjdApzbHVnOiBidWls"
+	},
+	{
+		"path": "2020-07-01-notes.mdx",
+		"summary": "In this blog post, Jonathan Clem shares his personal note-taking journey and how he has settled on using the Bear app for the foreseeable future. He explains his daily log system, which involves creating a new note for each day and appending tasks, thoughts, and events. Clem also discusses his use of \"contexts\" and \"pages\" to organize information related to projects and people. He appreciates Bear's hashtag feature, which allows for easy organization and referencing of topics. Although he is satisfied with Bear, Clem suggests some improvements he would make if he were to create his own note-taking app again, such as automation and the ability to create tag synonyms.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBIb3cgSSBUYWtlIE5vdGVzCnNsdWc6IGhvdy1pLXRha2Utbm90"
+	},
+	{
+		"path": "2020-09-22-labeling-prs.mdx",
+		"summary": "In this blog post, Jonathan Clem shares a simple method for labeling pull requests in public repositories based on files changed, made possible by a new event in GitHub Actions called `pull_request_target`. He explains the limitations of previous approaches and demonstrates how to create a workflow that runs on `pull_request_target` to label PRs according to a configuration file. This new method helps save Actions usage by running the labeling workflow only when needed.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBMYWJlbGluZyBQdWJsaWMgUmVwbyBQUnMgd2l0aCBHaXRIdWIg"
+	},
+	{
+		"path": "2020-10-16-react-canvas.mdx",
+		"summary": "In this blog post, Jonathan Clem shares his experience building a pannable, zoomable canvas in React. He details the challenges he faced and the solutions he implemented, such as decoupling the desired pan and zoom state from the canvas component itself and creating a React context that reported the user's desired pan and zoom state. He also explains how he built the panning state using a `usePan` hook and the scaling state using a `useScale` hook. Finally, he demonstrates how to create the illusion of a pannable, zoomable canvas by manipulating the canvas's background offset for panning and the canvas's scale for scaling.",
+		"promptHash": "WW91IGFyZSBhIGNvcHl3cml0ZXIgdGFza2VkIHdpdGggcHJvdmlkaW5nIHNpbmds",
+		"contentHash": "LS0tCnRpdGxlOiBCdWlsZGluZyBhIFBhbm5hYmxlLCBab29tYWJsZSBDYW52YXMg"
+	}
+]
