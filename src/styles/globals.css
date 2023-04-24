@@ -7,6 +7,8 @@
     --color-border: theme('colors.zinc.400');
     --color-canvas: theme('colors.zinc.50');
     --color-text: theme('colors.zinc.800');
+    --color-text-deemphasize: theme('colors.zinc.400');
+    --color-code-bg: theme('colors.zinc.200');
     --color-highlight: theme('colors.emerald.600');
   }
 
@@ -15,6 +17,8 @@
       --color-border: theme('colors.zinc.500');
       --color-canvas: theme('colors.zinc.800');
       --color-text: theme('colors.zinc.100');
+      --color-text-deemphasize: theme('colors.zinc.500');
+      --color-code-bg: theme('colors.zinc.900');
       --color-highlight: theme('colors.emerald.500');
     }
   }
@@ -71,5 +75,30 @@
 
   .article {
     @apply flex max-w-2xl flex-col gap-3;
+  }
+
+  .article pre {
+    @apply overflow-x-auto p-2;
+  }
+
+  .article :not(pre) code {
+    @apply bg-code-bg text-sm;
+  }
+
+  .article ul,
+  .article ol {
+    @apply ml-4 sm:ml-0;
+  }
+
+  .article ul {
+    @apply list-disc;
+  }
+
+  .article ol {
+    @apply list-decimal;
+  }
+
+  .article li::marker {
+    @apply text-text-deemphasize;
   }
 }

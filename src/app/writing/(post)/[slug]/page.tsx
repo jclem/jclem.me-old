@@ -14,10 +14,10 @@ const PostPage: FC<Props> = ({params}) => {
   const Content = getMDXComponent(post.body.code)
 
   return (
-    <>
+    <article className="article">
       <h1>{post.title}</h1>
       <Content />
-    </>
+    </article>
   )
 }
 

@@ -6,7 +6,9 @@ const Post = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     title: {type: 'string', required: true},
-    slug: {type: 'string', required: true}
+    slug: {type: 'string', required: true},
+    published: {type: 'boolean', required: true},
+    publishedAt: {type: 'date', required: true}
   },
   computedFields: {
     url: {

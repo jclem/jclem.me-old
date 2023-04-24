@@ -1,18 +1,13 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import {FC} from 'react'
-import jclemImage from '../../public/images/jclem.webp'
+import {ProfilePic} from '~/components/profile-pic'
 
 const IndexPage: FC = () => {
   return (
     <main className="flex flex-col gap-6">
       <header className="flex flex-col gap-6">
         <div className="flex items-center gap-4">
-          <Image
-            src={jclemImage}
-            alt="Photograph of Jonathan Clem"
-            className="h-12 w-12 rounded-full"
-          />
+          <ProfilePic size="large" />
           <h1>Jonathan Clem</h1>
         </div>
 
