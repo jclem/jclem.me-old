@@ -1,7 +1,7 @@
-import {Hanken_Grotesk} from '@next/font/google'
-import localFont from '@next/font/local'
 import {Analytics} from '@vercel/analytics/react'
 import {cva} from 'class-variance-authority'
+import {Hanken_Grotesk} from 'next/font/google'
+import localFont from 'next/font/local'
 import {FC, PropsWithChildren} from 'react'
 import '../styles/globals.css'
 
