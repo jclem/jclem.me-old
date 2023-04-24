@@ -57,12 +57,16 @@
     @apply text-highlight underline underline-offset-2;
   }
 
+  details {
+    @apply border border-dashed border-border p-1 text-sm;
+  }
+
   summary {
     @apply select-none;
   }
 
   summary::marker {
-    @apply text-sm text-text-deemphasize;
+    @apply text-text-deemphasize;
   }
 }
 
@@ -87,6 +91,10 @@
 
   .article {
     @apply flex max-w-2xl flex-col gap-3;
+  }
+
+  .article > h1 {
+    @apply mb-4;
   }
 
   .article > pre {
