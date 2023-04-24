@@ -1,6 +1,7 @@
 import {allPosts} from 'contentlayer/generated'
 import Link from 'next/link'
 import {FC} from 'react'
+import {pageTitle} from '~/page-title'
 
 const WritingPage: FC = () => {
   const sortedPublishedPosts = allPosts
@@ -35,3 +36,9 @@ const WritingPage: FC = () => {
 }
 
 export default WritingPage
+
+export async function generateMetadata() {
+  return {
+    title: pageTitle('Writing Archive')
+  }
+}

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import {FC} from 'react'
 import {ProfilePic} from '~/components/profile-pic'
+import {pageTitle} from '~/page-title'
 
 const IndexPage: FC = () => {
   return (
@@ -135,3 +136,9 @@ const IndexPage: FC = () => {
 }
 
 export default IndexPage
+
+export async function generateMetadata() {
+  return {
+    title: pageTitle('Jonathan Clem')
+  }
+}

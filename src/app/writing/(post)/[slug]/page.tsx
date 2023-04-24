@@ -2,6 +2,7 @@ import {assert} from '@jclem/assert'
 import {allPosts} from 'contentlayer/generated'
 import {getMDXComponent} from 'next-contentlayer/hooks'
 import {FC} from 'react'
+import {pageTitle} from '~/page-title'
 
 interface Props {
   params: {
@@ -35,6 +36,6 @@ export async function generateMetadata({
   const post = assert(allPosts.find((post) => post.slug === slug))
 
   return {
-    title: post.title
+    title: pageTitle(post.title)
   }
 }
