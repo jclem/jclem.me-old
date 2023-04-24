@@ -40,7 +40,7 @@ export function useMDXComponents(
       if (isLanguageBlock) {
         return (
           <>
-            <div className="flex items-center justify-end gap-2 border-b border-dashed border-border p-1 text-xs text-text-deemphasize">
+            <div className="flex items-center justify-end gap-2 border-b border-dashed border-border p-1 text-xs">
               {languageName.get(language) ?? language}
               <CopyButton copy={String(props.children).trim()} />
             </div>

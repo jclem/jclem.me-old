@@ -7,6 +7,7 @@
     --color-border: theme('colors.zinc.400');
     --color-canvas: theme('colors.white');
     --color-card: theme('colors.zinc.50');
+    --color-card-text: theme('colors.zinc.800');
     --color-text: theme('colors.zinc.800');
     --color-text-deemphasize: theme('colors.zinc.400');
     --color-code-bg: theme('colors.zinc.200');
@@ -18,6 +19,7 @@
       --color-border: theme('colors.zinc.500');
       --color-canvas: theme('colors.zinc.800');
       --color-card: theme('colors.zinc.700');
+      --color-card-text: theme('colors.zinc.100');
       --color-text: theme('colors.zinc.100');
       --color-text-deemphasize: theme('colors.zinc.500');
       --color-code-bg: theme('colors.zinc.900');
@@ -112,7 +114,7 @@
   }
 
   .article > pre {
-    @apply border border-solid border-border bg-card leading-tight;
+    @apply card border border-solid border-border leading-tight;
   }
 
   .article > :not(pre) > code {
@@ -146,5 +148,11 @@
 
   .figure-video figcaption {
     @apply text-sm italic text-text-deemphasize;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-card text-card-text;
   }
 }

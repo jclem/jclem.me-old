@@ -13,6 +13,7 @@ const tailwindConfig = {
         border: 'var(--color-border)',
         canvas: 'var(--color-canvas)',
         card: 'var(--color-card)',
+        'card-text': 'var(--color-card-text)',
         text: 'var(--color-text)',
         'text-deemphasize': 'var(--color-text-deemphasize)',
         'code-bg': 'var(--color-code-bg)',
