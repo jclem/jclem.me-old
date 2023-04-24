@@ -49,6 +49,10 @@
     @apply text-lg;
   }
 
+  .math {
+    @apply text-sm;
+  }
+
   a {
     @apply text-highlight underline underline-offset-2;
   }

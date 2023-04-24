@@ -1,5 +1,6 @@
 import {Analytics} from '@vercel/analytics/react'
 import {cva} from 'class-variance-authority'
+import 'katex/dist/katex.min.css'
 import {Hanken_Grotesk} from 'next/font/google'
 import localFont from 'next/font/local'
 import {FC, PropsWithChildren} from 'react'

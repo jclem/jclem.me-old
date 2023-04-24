@@ -1,4 +1,6 @@
 import {defineDocumentType, makeSource} from 'contentlayer/source-files'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -8,7 +10,8 @@ const Post = defineDocumentType(() => ({
     title: {type: 'string', required: true},
     slug: {type: 'string', required: true},
     published: {type: 'boolean', required: true},
-    publishedAt: {type: 'date', required: true}
+    publishedAt: {type: 'date', required: true},
+    hasMath: {type: 'boolean', required: false, default: false}
   },
   computedFields: {
     url: {
@@ -20,5 +23,9 @@ const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'posts',
-  documentTypes: [Post]
+  documentTypes: [Post],
+  mdx: {
+    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkMath]
+  }
 })

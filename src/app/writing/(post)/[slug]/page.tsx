@@ -26,3 +26,15 @@ export default PostPage
 export async function generateStaticParams() {
   return allPosts.map((post) => ({slug: post.slug}))
 }
+
+export async function generateMetadata({
+  params: {slug}
+}: {
+  params: {slug: string}
+}) {
+  const post = assert(allPosts.find((post) => post.slug === slug))
+
+  return {
+    title: post.title
+  }
+}
