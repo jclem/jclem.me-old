@@ -60,7 +60,7 @@
   }
 
   details {
-    @apply border border-dashed border-border p-1 text-sm;
+    @apply border border-dashed border-border p-2 text-sm;
   }
 
   summary {
@@ -112,7 +112,7 @@
   }
 
   .article > pre {
-    @apply rounded-sm border border-solid border-border bg-card leading-tight;
+    @apply border border-solid border-border bg-card leading-tight;
   }
 
   .article > :not(pre) > code {
