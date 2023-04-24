@@ -52,6 +52,14 @@
   a {
     @apply text-highlight underline underline-offset-2;
   }
+
+  summary {
+    @apply select-none;
+  }
+
+  summary::marker {
+    @apply text-sm text-text-deemphasize;
+  }
 }
 
 @layer components {
@@ -77,11 +85,15 @@
     @apply flex max-w-2xl flex-col gap-3;
   }
 
-  .article pre {
+  .article > pre {
     @apply overflow-x-auto p-2;
   }
 
-  .article :not(pre) code {
+  .article > pre > code {
+    @apply text-sm;
+  }
+
+  .article > :not(pre) > code {
     @apply bg-code-bg text-sm;
   }
 
