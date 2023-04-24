@@ -1,6 +1,27 @@
 import type {MDXComponents} from 'mdx/types'
 import {CopyButton} from './components/copy-button'
 
+const languageName: Map<string | undefined, string> = new Map(
+  Object.entries({
+    bash: 'Bash',
+    curl: 'cURL',
+    crystal: 'Crystal',
+    dockerfile: 'Dockerfile',
+    elixir: 'Elixir',
+    hcl: 'HCL',
+    json: 'JSON',
+    js: 'JavaScript',
+    javascript: 'JavaScript',
+    jsx: 'JavaScript JSX',
+    shell: 'Shell',
+    text: 'Plain Text',
+    ts: 'TypeScript',
+    typescript: 'TypeScript',
+    tsx: 'TypeScript JSX',
+    yaml: 'YAML'
+  })
+)
+
 export function useMDXComponents(
   components: MDXComponents = {}
 ): MDXComponents {
@@ -20,7 +41,7 @@ export function useMDXComponents(
         return (
           <>
             <div className="flex items-center justify-end gap-2 border-b border-dashed border-border p-1 text-xs text-text-deemphasize">
-              {language}
+              {languageName.get(language) ?? language}
               <CopyButton copy={String(props.children).trim()} />
             </div>
 
