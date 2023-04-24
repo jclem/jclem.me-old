@@ -12,7 +12,7 @@ export const CopyButton: FC<Props> = ({copy}) => {
   }
 
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} aria-label="Copy Code to Clipboard">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
