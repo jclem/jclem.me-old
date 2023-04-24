@@ -11,6 +11,7 @@ const tailwindConfig = {
       colors: {
         border: 'var(--color-border)',
         canvas: 'var(--color-canvas)',
+        card: 'var(--color-card)',
         text: 'var(--color-text)',
         'text-deemphasize': 'var(--color-text-deemphasize)',
         'code-bg': 'var(--color-code-bg)',

@@ -6,6 +6,7 @@
   :root {
     --color-border: theme('colors.zinc.400');
     --color-canvas: theme('colors.white');
+    --color-card: theme('colors.zinc.50');
     --color-text: theme('colors.zinc.800');
     --color-text-deemphasize: theme('colors.zinc.400');
     --color-code-bg: theme('colors.zinc.200');
@@ -16,6 +17,7 @@
     :root {
       --color-border: theme('colors.zinc.500');
       --color-canvas: theme('colors.zinc.800');
+      --color-card: theme('colors.zinc.700');
       --color-text: theme('colors.zinc.100');
       --color-text-deemphasize: theme('colors.zinc.500');
       --color-code-bg: theme('colors.zinc.900');
@@ -97,12 +99,16 @@
     @apply mb-4;
   }
 
+  .article hr {
+    @apply border-border;
+  }
+
   .article > pre {
-    @apply overflow-x-auto p-2;
+    @apply overflow-x-auto rounded-sm border border-dashed border-border bg-card p-2 leading-tight;
   }
 
   .article > pre > code {
-    @apply text-sm;
+    @apply text-xs;
   }
 
   .article > :not(pre) > code {
