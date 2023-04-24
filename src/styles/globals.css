@@ -101,4 +101,16 @@
   .article li::marker {
     @apply text-text-deemphasize;
   }
+
+  .figure-video {
+    @apply flex flex-col gap-2;
+  }
+
+  .figure-video video {
+    @apply w-full;
+  }
+
+  .figure-video figcaption {
+    @apply text-sm italic text-text-deemphasize;
+  }
 }
