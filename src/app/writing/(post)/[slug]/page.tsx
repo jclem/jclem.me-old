@@ -2,6 +2,7 @@ import {assert} from '@jclem/assert'
 import {allPosts} from 'contentlayer/generated'
 import {getMDXComponent} from 'next-contentlayer/hooks'
 import {FC} from 'react'
+import {useMDXComponents} from '~/mdx-components'
 import {pageTitle} from '~/page-title'
 
 interface Props {
@@ -13,11 +14,12 @@ interface Props {
 const PostPage: FC<Props> = ({params}) => {
   const post = assert(allPosts.find((post) => post.slug === params.slug))
   const Content = getMDXComponent(post.body.code)
+  const components = useMDXComponents()
 
   return (
     <article className="article">
       <h1>{post.title}</h1>
-      <Content />
+      <Content components={components} />
     </article>
   )
 }
