@@ -3,7 +3,7 @@ import {FC, PropsWithChildren} from 'react'
 import {ProfilePic} from '~/components/profile-pic'
 import {WritingLayoutBase} from '~/components/writing-layout-base'
 
-export const WritingLayout: FC<PropsWithChildren> = ({children}) => {
+const WritingLayout: FC<PropsWithChildren> = ({children}) => {
   return (
     <WritingLayoutBase
       navLinks={
