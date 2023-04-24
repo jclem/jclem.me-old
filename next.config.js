@@ -1,5 +1,7 @@
-import withMDX from '@next/mdx'
-import {withContentlayer} from 'next-contentlayer'
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const withMDX = require('@next/mdx')
+const {withContentlayer} = require('next-contentlayer')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withContentlayer(
@@ -12,4 +14,4 @@ const nextConfig = withContentlayer(
   })
 )
 
-export default nextConfig
+module.exports = nextConfig
