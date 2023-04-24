@@ -2,8 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply bg-zinc-900;
-  @apply text-white;
+@layer base {
+  :root {
+    --color-border: theme('colors.zinc.400');
+    --color-canvas: theme('colors.zinc.50');
+    --color-text: theme('colors.zinc.800');
+    --color-highlight: theme('colors.emerald.600');
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-border: theme('colors.zinc.500');
+      --color-canvas: theme('colors.zinc.800');
+      --color-text: theme('colors.zinc.100');
+      --color-highlight: theme('colors.emerald.500');
+    }
+  }
+
+  html,
+  body {
+    @apply bg-canvas font-sans text-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono font-semibold;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  a {
+    @apply text-highlight underline underline-offset-2;
+  }
+}
+
+@layer components {
+  .defn-list {
+    @apply grid font-mono text-xs;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .defn-list dt,
+  .defn-list dd {
+    @apply border border-b-0 border-border p-1 last-of-type:border-b;
+  }
+
+  .defn-list dt {
+    @apply font-bold;
+  }
+
+  .defn-list dd {
+    @apply border-l-0;
+  }
+
+  .article {
+    @apply flex max-w-2xl flex-col gap-3;
+  }
 }

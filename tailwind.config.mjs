@@ -7,6 +7,12 @@ const tailwindConfig = {
   ],
   theme: {
     extend: {
+      colors: {
+        border: 'var(--color-border)',
+        canvas: 'var(--color-canvas)',
+        text: 'var(--color-text)',
+        highlight: 'var(--color-highlight)'
+      },
       fontFamily: {
         sans: ['var(--font-sans)'],
         mono: ['var(--font-mono)']

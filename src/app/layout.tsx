@@ -17,13 +17,22 @@ const berkeleyMono = localFont({
       path: '../fonts/BerkeleyMono-Regular.woff2',
       weight: '400',
       style: 'normal'
+    },
+    {
+      path: '../fonts/BerkeleyMono-Bold.woff2',
+      weight: '700',
+      style: 'normal'
     }
   ],
   variable: '--font-mono',
   display: 'swap'
 })
 
-const bodyClass = cva([berkeleyMono.className, hankenGrotesk.className])()
+const bodyClass = cva([
+  berkeleyMono.variable,
+  hankenGrotesk.variable,
+  'mx-auto max-w-3xl w-full p-4 sm:p-8 flex flex-col gap-8'
+])()
 
 const RootLayout: FC<PropsWithChildren> = ({children}) => {
   return (
