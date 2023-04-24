@@ -112,20 +112,7 @@
   }
 
   .article > pre {
-    @apply overflow-x-auto rounded-sm border border-dashed border-border bg-card p-2 leading-tight;
-  }
-
-  .article > pre > code {
-    @apply relative block text-xs;
-  }
-
-  .article > pre > code > button {
-    @apply absolute right-0 top-0 text-text-deemphasize;
-  }
-
-  .article > pre > code::after {
-    @apply absolute right-6 top-0 text-text-deemphasize;
-    content: attr(data-language);
+    @apply rounded-sm border border-solid border-border bg-card leading-tight;
   }
 
   .article > :not(pre) > code {
