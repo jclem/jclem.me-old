@@ -1,7 +1,7 @@
 import {VariantProps, cva} from 'class-variance-authority'
 import Image from 'next/image'
 import {FC} from 'react'
-import jclemImage from '../../public/images/jclem.webp'
+import jclemImage from '~/public/images/jclem.webpp'
 
 const className = cva(['rounded-full'], {
   variants: {

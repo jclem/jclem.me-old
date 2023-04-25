@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "contentlayer/generated": ["./.contentlayer/generated"],
+      "~/public/*": ["public/*"],
       "~/*": ["src/*"]
     },
     "allowJs": true,
