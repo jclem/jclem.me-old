@@ -16,4 +16,5 @@ jobs:
           node-version: 19.x
           cache: npm
       - run: npm ci
+      - run: npx contentlayer build
       - run: npm run check
