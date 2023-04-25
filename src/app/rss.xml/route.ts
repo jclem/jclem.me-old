@@ -13,6 +13,7 @@ const siteURL =
 
 const feed = new Feed({
   title: 'Jonathan Clem / jclem.me',
+  feed: getURL('/rss.xml'),
   id: getURL(),
   link: getURL(),
   description: 'Personal blog of Jonathan Clem',
