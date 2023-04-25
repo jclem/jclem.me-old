@@ -17,4 +17,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx contentlayer build
+      - run: ls node_modules/next/image-types
+      - run: ls public/images
       - run: npm run check
