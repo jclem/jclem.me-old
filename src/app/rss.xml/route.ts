@@ -12,7 +12,7 @@ const siteURL =
     : `https://${siteDomain}`
 
 const feed = new Feed({
-  title: 'Jonathan Clem / jclem.me',
+  title: 'jclem.me',
   feed: getURL('/rss.xml'),
   id: getURL(),
   link: getURL(),
