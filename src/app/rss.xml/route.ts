@@ -5,9 +5,15 @@ import {sortedPublishedPosts} from '~/data/posts'
 const thisYear = new Date().getFullYear()
 const author = {name: 'Jonathan Clem', link: 'https://jclem.me'}
 
+const siteDomain = process.env.SITE_DOMAIN ?? process.env.VERCEL_URL
+const siteURL =
+  process.env.VERCEL_ENV === 'development'
+    ? `http://${siteDomain}`
+    : `https://${siteDomain}`
+
 const feed = new Feed({
   title: 'Jonathan Clem · jclem.me',
-  id: 'https://jclem.me',
+  id: siteURL,
   link: getURL(),
   description: 'Personal blog of Jonathan Clem',
   copyright: `All rights reserved ${thisYear}, Jonathan Clem`,
@@ -36,7 +42,5 @@ export async function GET() {
 }
 
 function getURL(path = '') {
-  return process.env.VERCEL_ENV === 'development'
-    ? `http://${process.env.VERCEL_URL}${path}`
-    : `https://${process.env.SITE_DOMAIN ?? process.env.VERCEL_URL}${path}`
+  return `${siteURL}${path}`
 }
