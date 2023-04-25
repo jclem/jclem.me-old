@@ -13,7 +13,7 @@ const siteURL =
 
 const feed = new Feed({
   title: 'Jonathan Clem / jclem.me',
-  id: siteURL,
+  id: getURL(),
   link: getURL(),
   description: 'Personal blog of Jonathan Clem',
   copyright: `All rights reserved ${thisYear}, Jonathan Clem`,
@@ -24,7 +24,7 @@ const feed = new Feed({
 sortedPublishedPosts.forEach((post) => {
   feed.addItem({
     title: post.title,
-    id: post.slug,
+    id: getURL(post.url),
     link: getURL(post.url),
     description: post.summary,
     date: new Date(post.publishedAt),
