@@ -38,5 +38,5 @@ export async function GET() {
 function getURL(path = '') {
   return process.env.VERCEL_ENV === 'development'
     ? `http://${process.env.VERCEL_URL}${path}`
-    : `https://${process.env.VERCEL_URL}${path}`
+    : `https://${process.env.SITE_DOMAIN ?? process.env.VERCEL_URL}${path}`
 }
