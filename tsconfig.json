@@ -1,19 +1,11 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": [
-        "./.contentlayer/generated"
-      ],
-      "~/*": [
-        "src/*"
-      ]
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "~/*": ["src/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -41,7 +33,5 @@
     ".contentlayer/generated",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
