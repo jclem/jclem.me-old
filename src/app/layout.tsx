@@ -1,6 +1,7 @@
 import {Analytics} from '@vercel/analytics/react'
 import {cva} from 'class-variance-authority'
 import 'katex/dist/katex.min.css'
+import {Metadata} from 'next'
 import {Hanken_Grotesk} from 'next/font/google'
 import localFont from 'next/font/local'
 import {FC, PropsWithChildren} from 'react'
@@ -48,3 +49,16 @@ const RootLayout: FC<PropsWithChildren> = ({children}) => {
 }
 
 export default RootLayout
+
+export const metadata: Metadata = {
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        {
+          url: '/rss.xml',
+          title: 'RSS Feed'
+        }
+      ]
+    }
+  }
+}
