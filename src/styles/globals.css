@@ -76,7 +76,7 @@
 
 @layer components {
   .defn-list {
-    @apply grid font-mono text-xs;
+    @apply grid font-mono text-sm sm:text-xs;
     grid-template-columns: 1fr 4fr;
   }
 
