@@ -18,6 +18,11 @@ const nextConfig = withContentlayer(
           source: '/posts/:slug',
           destination: '/writing/:slug',
           permanent: true
+        },
+        {
+          source: '/posts',
+          destination: '/writing',
+          permanent: true
         }
       ]
     }
