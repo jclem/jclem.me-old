@@ -13,6 +13,7 @@ const Post = defineDocumentType(() => ({
     slug: {type: 'string', required: true},
     published: {type: 'boolean', required: true},
     publishedAt: {type: 'date', required: true},
+    updatedAt: {type: 'date', required: false},
     hasMath: {type: 'boolean', required: false, default: false}
   },
   computedFields: {

@@ -1,15 +1,10 @@
 import {Feed} from 'feed'
 import {NextResponse} from 'next/server'
 import {sortedPublishedPosts} from '~/data/posts'
+import {getURL} from '~/url'
 
 const thisYear = new Date().getFullYear()
 const author = {name: 'Jonathan Clem', link: 'https://jclem.me'}
-
-const siteDomain = process.env.SITE_DOMAIN ?? process.env.VERCEL_URL
-const siteURL =
-  process.env.VERCEL_ENV === 'development'
-    ? `http://${siteDomain}`
-    : `https://${siteDomain}`
 
 const feed = new Feed({
   title: 'jclem.me',
@@ -40,8 +35,4 @@ export async function GET() {
       'Content-Type': 'application/rss+xml'
     }
   })
-}
-
-function getURL(path = '') {
-  return `${siteURL}${path}`
 }

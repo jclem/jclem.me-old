@@ -58,6 +58,12 @@ export const metadata: Metadata = {
           url: '/rss.xml',
           title: 'RSS Feed'
         }
+      ],
+      'application/xml': [
+        {
+          url: '/sitemap.xml',
+          title: 'Sitemap'
+        }
       ]
     }
   }
