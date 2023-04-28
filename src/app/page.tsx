@@ -139,6 +139,8 @@ export default IndexPage
 
 export async function generateMetadata() {
   return {
-    title: pageTitle('Jonathan Clem')
+    title: pageTitle('Jonathan Clem'),
+    description:
+      'Jonathan Clem is a Brooklyn, New York-based principal software engineer at GitHub.'
   }
 }
