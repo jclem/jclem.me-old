@@ -16,5 +16,6 @@ jobs:
           node-version: 18.x
           cache: npm
       - run: npm ci
+      - run: npx next lint # Helps generate next-env.d.ts
       - run: npx contentlayer build
       - run: npm run check
