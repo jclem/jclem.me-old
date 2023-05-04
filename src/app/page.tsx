@@ -58,7 +58,7 @@ const IndexPage: FC = () => {
         </dl>
       </header>
 
-      <article className="article">
+      <article className="article hyphens-auto">
         <p>
           Hello, I&apos;m Jonathan. I live in Brooklyn, New York with my
           wonderful wife,{' '}

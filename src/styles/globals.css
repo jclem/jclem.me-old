@@ -94,7 +94,7 @@
   }
 
   .article {
-    @apply flex max-w-2xl flex-col gap-3;
+    @apply flex max-w-2xl flex-col gap-3 hyphens-auto;
   }
 
   .article > h1 {
